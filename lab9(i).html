@@ -1,0 +1,93 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script>
+	$(document).ready(function(){
+	$(".heading").click(function(){
+	$(".heading").hide();
+	});
+	$("p").dblclick(function(){
+	$("p").css("background-color","red")
+	});
+	
+	$("#first").focus(function(){
+	$("#first_span").text("Enter First Name");
+	});
+	$("#second").focus(function(){
+	$("#second_span").text("Enter Middle Name");
+	});
+	$("#third").focus(function(){
+	$("#third_span").text("Enter Last Name");
+	});
+	$('#name').focus(function() {
+    $('#name').attr("disabled",true);
+	});
+	$('#btn').click(function(){
+	$('#list').show();
+	var n=$("#list li").length;
+	alert("size:"+n);
+	});
+	});
+	
+	</script>
+	</head>
+	<body>
+	<!--Part A -->
+	<!-- Task 1.	All six headings. Hide all headings on the page when they are clicked. -->
+		<h1 class="heading">Heading 1</h1>
+		<h2 class="heading">Heading 2</h2>
+		<h3 class="heading">Heading 3</h3>
+		<h4 class="heading">Heading 4</h4>
+		<h5 class="heading">Heading 5</h5>
+		<h6 class="heading">Heading 6</h6>
+	
+	<!-- Task 2.	A paragraph tag. Double click on paragraph to change its background color. -->
+		<p> This are few sample form to be filled out.</p>
+		
+	<!-- Task 3. Three text fields (first name, last name and middle name) and empty span 
+		elements to display information regarding them. When the text fields are focused the 
+		corresponding span elements display a message regarding the text field. -->
+		<form>
+		<label>First Name</label> 
+		</br>
+		<input type="text" name="FirstName" id="first">
+		<span id="first_span" ></span>
+		</br>
+		<label>Middle Name</label> 
+		</br>
+		<input type="text" name="MiddleName" id="second">
+		<span id="second_span"></span>
+		</br>
+		<label>Last Name</label> 
+		</br>
+		<input type="text" name="LastName" id="third">
+		<span id="third_span"></span>
+		</br>
+		</form>
+		<br>
+	
+	<!-- Task 4. Two text fields (name and roll number). Stop the user from typing anything in first text input box (name). -->
+		<form>
+		<label>Name</label> 
+		</br>
+		<input type="text" name="Name" id="name">
+		</br>
+		<label>Roll No.</label> 
+		</br>
+		<input type="text" name="Rollno">
+		</form>
+		<br>
+		<br>
+	<!-- Task 5. A list and a button. Display the number of list items in the list on button click.-->
+		<form>
+		<input type="button" id="btn" value="show list">
+		<ol id="list" style="display:none">
+		<li>Element 1</li>
+		<li>Element 1</li>
+		<li>Element 1</li>
+		<li>Element 1</li>
+		<ol>
+		</form>
+	</body>
+</html>
